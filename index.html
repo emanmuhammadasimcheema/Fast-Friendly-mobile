@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ToolMaster - Free Online Tools</title>
+    <meta name="description"
+        content="ToolMaster provides fast and free online calculators, converters, text tools and useful utilities.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            <span>⚡</span> ToolMaster
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#tools">Tools</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button id="themeBtn" class="theme-btn">🌙</button>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                🚀 100% Free Online Tools
+            </div>
+
+            <h1>
+                Everything You Need,
+                <span>In One Place.</span>
+            </h1>
+
+            <p>
+                Fast, simple and free online tools for students,
+                creators, developers and everyday users.
+            </p>
+
+            <div class="hero-search">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search a tool..."
+                >
+
+                <button onclick="searchTools()">
+                    🔍 Search
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TOOLS -->
+    <section class="tools-section" id="tools">
+
+        <div class="section-heading">
+
+            <p class="small-title">OUR TOOLS</p>
+
+            <h2>
+                Powerful Tools. <span>Zero Cost.</span>
+            </h2>
+
+            <p>
+                Choose any tool and get your work done quickly.
+            </p>
+
+        </div>
+
+
+        <div class="category-buttons">
+
+            <button class="active" onclick="filterTools('all')">
+                All
+            </button>
+
+            <button onclick="filterTools('calculator')">
+                🧮 Calculators
+            </button>
+
+            <button onclick="filterTools('text')">
+                📝 Text
+            </button>
+
+            <button onclick="filterTools('converter')">
+                🔄 Converter
+            </button>
+
+            <button onclick="filterTools('utility')">
+                🛠 Utilities
+            </button>
+
+        </div>
+
+
+        <div class="tools-grid" id="toolsGrid">
+
+            <!-- AGE -->
+            <div class="tool-card" data-category="calculator">
+
+                <div class="tool-icon">🎂</div>
+
+                <h3>Age Calculator</h3>
+
+                <p>
+                    Calculate your exact age in years,
+                    months and days.
+                </p>
+
+                <button onclick="openTool('Age Calculator')">
+                    Open Tool →
+                </button>
+
+            </div>
+
+
+            <!-- CALCULATOR -->
+            <div class="tool-card" data-category="calculator">
+
+                <div class="tool-icon">🧮</div>
+
+                <h3>Calculator</h3>
+
+                <p>
+                    Perform quick mathematical calculations.
+                </p>
+
+                <button onclick="openTool('Calculator')">
+                    Open Tool →
+                </button>
+
+            </div>
+
+
+            <!-- PERCENTAGE -->
+            <div class="tool-card" data-category="calculator">
+
+                <div class="tool-icon">📊</div>
+
+                <h3>Percentage Calculator</h3>
+
+                <p>
+                    Calculate percentages quickly and easily.
+                </p>
+
+                <button onclick="openTool('Percentage Calculator')">
+                    Open Tool →
+                </button>
+
+            </div>
+
+
+            <!-- WORD COUNTER -->
+            <div class="tool-card" data-category="text">
+
+                <div class="tool-icon">📝</div>
+
+                <h3>Word Counter</h3>
+
+                <p>
+                    Count words, characters and sentences.
+                </p>
+
+                <button onclick="openTool('Word Counter')">
+                    Open Tool →
+                </button>
+
+            </div>
+
+
+            <!-- TEXT CASE -->
+            <div class="tool-card" data-category="text">
+
+                <div class="tool-icon">🔤</div>
+
+                <h3>Text Case Converter</h3>
+
+                <p>
+                    Convert text to uppercase or lowercase.
+                </p>
+
+                <button onclick="openTool('Text Case Converter')">
+                    Open Tool →
+                </button>
+
+            </div>
+
+
+            <!-- UNIT -->
+            <div class="tool-card" data-category="converter">
+
+                <div class="tool-icon">📏</div>
+
+                <h3>Unit Converter</h3>
+
+                <p>
+                    Convert length, weight and other units.
+                </p>
+
+                <button onclick="openTool('Unit Converter')">
+                    Open Tool →
+                </button>
+
+            </div>
+
+
+            <!-- PASSWORD -->
+            <div class="tool-card" data-category="utility">
+
+                <div class="tool-icon">🔐</div>
+
+                <h3>Password Generator</h3>
+
+                <p>
+                    Generate strong random passwords.
+                </p>
+
+                <button onclick="openTool('Password Generator')">
+                    Open Tool →
+                </button>
+
+            </div>
+
+
+            <!-- QR -->
+            <div class="tool-card" data-category="utility">
+
+                <div class="tool-icon">🔳</div>
+
+                <h3>QR Code Generator</h3>
+
+                <p>
+                    Create QR codes from text or links.
+                </p>
+
+                <button onclick="openTool('QR Code Generator')">
+                    Open Tool →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+    <section class="features">
+
+        <div class="feature">
+
+            <div>⚡</div>
+
+            <h3>Super Fast</h3>
+
+            <p>
+                Lightweight website designed for fast loading.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div>📱</div>
+
+            <h3>Mobile Friendly</h3>
+
+            <p>
+                Works smoothly on phones, tablets and computers.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div>🔒</div>
+
+            <h3>Simple & Safe</h3>
+
+            <p>
+                Easy-to-use tools with a clean interface.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <div>
+
+            <p class="small-title">ABOUT TOOLMASTER</p>
+
+            <h2>
+                Useful tools for
+                <span>everyone.</span>
+            </h2>
+
+            <p>
+                ToolMaster is designed to bring useful online
+                utilities together in one simple place.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <div class="section-heading">
+
+            <p class="small-title">CONTACT</p>
+
+            <h2>
+                Have an <span>idea?</span>
+            </h2>
+
+            <p>
+                Tell us which tool you want to see next.
+            </p>
+
+        </div>
+
+        <form id="contactForm">
+
+            <input
+                type="text"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <textarea
+                placeholder="Your Message"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="logo">
+            ⚡ ToolMaster
+        </div>
+
+        <p>
+            © 2026 ToolMaster. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- TOOL POPUP -->
+    <div class="modal" id="toolModal">
+
+        <div class="modal-box">
+
+            <button
+                class="close"
+                onclick="closeTool()">
+                ×
+            </button>
+
+            <div id="modalContent"></div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+</body>
+</html>
